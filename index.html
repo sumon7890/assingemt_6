@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI Universe Hub</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="container mx-auto max-w-[1280px]">
+        <div class="space-y-8 mt-10">
+            <h1 class="text-center text-5xl font-bold">AI Universe Hub</h1>
+            <div class="flex justify-center">
+                <button id="sort-btn" class="btn bg-[#EB5757] border-none">
+                    Sort By Date
+                </button>
+            </div>
+        </div>
+        <main>
+            <section>
+                <div id="spinner" class="flex justify-center mt-10 hidden">
+                    <div
+                        class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#EB5757]"
+                    ></div>
+                </div>
+                <div
+                    id="cards-container"
+                    class="grid grid-cols-12 gap-y-10 md:gap-10 my-8"
+                ></div>
+                <section>
+                    <input
+                        type="checkbox"
+                        id="my-modal-3"
+                        class="modal-toggle"
+                    />
+                    <div class="modal">
+                        <div
+                            class="modal-box w-11/12 max-w-5xl relative overflow-x-hidden"
+                        >
+                            <label
+                                for="my-modal-3"
+                                class="btn btn-sm btn-circle bg-[#EB5757] border-0 text-white absolute right-2 top-2 z-10 hover:bg-[#EB5757]"
+                                >✕</label
+                            >
+
+                            <div
+                                style="background-color: white"
+                                class="flex flex-col md:flex-row justify-between md:p-5 items-center gap-y-5 md:gap-5 w-auto mx-auto"
+                            >
+                                <div
+                                    class="card bg-[#FEF7F7] p-4 w-full md:w-6/12 bg-base-100 shadow-xl"
+                                >
+                                    <h1
+                                        id="modal-desc"
+                                        class="font-bold mx-auto max-w-[420px] mt-5"
+                                    ></h1>
+                                    <div
+                                        id="plan-container"
+                                        class="flex flex-col md:flex-row mx-auto gap-2 font-bold mt-5"
+                                    ></div>
+                                    <div
+                                        class="flex flex-col md:flex-row gap-y-2 md:gap-y-0 mt-5 mx-auto w-[420px]"
+                                    >
+                                        <div id="features-div"></div>
+                                        <div
+                                            id="integrations"
+                                            class="md:pl-6 mb-5"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div
+                                    id=""
+                                    class="card w-full md:w-6/12 bg-base-100 shadow-xl"
+                                >
+                                    <figure class="px-5 pt-5 md:px-10 md:pt-10">
+                                        <img
+                                            id="modal-image"
+                                            alt=""
+                                            class="rounded-xl relative"
+                                        />
+                                        <div id="badge-container">
+                                            <div>
+                                                <div
+                                                    class="badge rounded-sm bg-[#EB5757] border-none absolute md:top-14 md:right-12 top-8 right-8"
+                                                >
+                                                    primary
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </figure>
+                                    <div id="faq-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="flex justify-center">
+                    <button
+                        id="see-more-btn"
+                        class="hidden mb-10 btn bg-[#EB5757] border-none"
+                    >
+                        See More
+                    </button>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
